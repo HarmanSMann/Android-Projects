@@ -24,4 +24,16 @@
 //3 - Data Types
     // -> Int, String, Boolean
 
+//4 - Operators
+    //1
+        println(10 * 5)
+    //2
+        println(10 / 5)
+    //3
+        val x = 5
+        ++x
+    //4
+        val x = 5
+        val y = 3
+        println(x == y)
 
