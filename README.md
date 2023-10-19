@@ -1,2 +1,2 @@
 # Android-Projects
-Android Projects I have over my year at Humber College
+Android Projects I have over the past 2 years
