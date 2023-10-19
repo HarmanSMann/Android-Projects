@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">StripeBasics</string>
+    <string name="pay_now">Pay Now</string>
+</resources>
