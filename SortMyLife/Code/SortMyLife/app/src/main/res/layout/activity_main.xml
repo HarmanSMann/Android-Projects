@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#63D2FF"
+    >
+
+    <!--Just a constraint to hold the interaction stuff we have-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/Interaction_CL"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/interaction_bar_end_gl_h"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <!--Nav bar guideline-->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/interaction_bar_end_gl_h"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.9"
+        ></androidx.constraintlayout.widget.Guideline>
+
+<!-- Nav bar constraint-->
+    <!--buttons will need to be heavily worked on later, need to add images on them,
+        considering Image Button, but images must be scaled correctly beforehand-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/nav_bar_constraint"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+
+        android:background="#2081C3"
+
+        app:layout_constraintTop_toBottomOf="@+id/interaction_bar_end_gl_h"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        >
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/nav_bar_gl_v_20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.20"
+            ></androidx.constraintlayout.widget.Guideline>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/nav_bar_gl_v_40dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.40"
+            ></androidx.constraintlayout.widget.Guideline>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/nav_bar_gl_v_60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.60"
+            ></androidx.constraintlayout.widget.Guideline>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/nav_bar_gl_v_80dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.8"
+            ></androidx.constraintlayout.widget.Guideline>
+
+        <Button
+            android:id="@+id/nav_bar_button_calender"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="3dp"
+            android:drawableTop="@drawable/ic_launcher_foreground"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/nav_bar_gl_v_20dp"
+            ></Button>
+
+        <Button
+            android:id="@+id/nav_bar_button_notes"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="3dp"
+            android:drawableTop="@drawable/ic_launcher_foreground"
+            android:gravity="top"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/nav_bar_gl_v_40dp"
+            app:layout_constraintStart_toStartOf="@+id/nav_bar_gl_v_20dp"
+            app:layout_constraintTop_toTopOf="parent"
+            ></Button>
+
+        <Button
+            android:id="@+id/nav_bar_button_AddEvent"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="3dp"
+            android:drawableTop="@drawable/ic_launcher_foreground"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/nav_bar_gl_v_40dp"
+            app:layout_constraintEnd_toStartOf="@+id/nav_bar_gl_v_60dp"
+            ></Button>
+
+        <Button
+            android:id="@+id/nav_bar_button_Budget"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="3dp"
+            android:drawableTop="@drawable/ic_launcher_foreground"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/nav_bar_gl_v_60dp"
+            app:layout_constraintEnd_toStartOf="@+id/nav_bar_gl_v_80dp"
+            >
+
+        </Button>
+
+        <Button
+            android:id="@+id/nav_bar_button_Profile"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="3dp"
+            android:drawableTop="@drawable/ic_launcher_foreground"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/nav_bar_gl_v_80dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            >
+        </Button>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
